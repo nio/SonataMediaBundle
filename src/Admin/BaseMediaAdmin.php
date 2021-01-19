@@ -103,7 +103,7 @@ abstract class BaseMediaAdmin extends AbstractAdmin
         ]);
     }
 
-    public function getNewInstance()
+    public function getNewInstance(): object
     {
         $media = parent::getNewInstance();
 
