@@ -59,7 +59,7 @@ abstract class BaseMediaAdmin extends AbstractAdmin
         $media->setContext($parameters['context']);
     }
 
-    public function getPersistentParameters()
+    public function getPersistentParameters(): array
     {
         $parameters = parent::getPersistentParameters();
 
