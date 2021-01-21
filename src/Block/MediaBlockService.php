@@ -171,7 +171,7 @@ class MediaBlockService extends AbstractBlockService
         ], $response);
     }
 
-    public function load(BlockInterface $block)
+    public function load(BlockInterface $block): void
     {
         $media = $block->getSetting('mediaId', null);
 
