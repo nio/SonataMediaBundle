@@ -209,7 +209,7 @@ class GalleryBlockService extends AbstractBlockService
         ], $response);
     }
 
-    public function load(BlockInterface $block)
+    public function load(BlockInterface $block): void
     {
         $gallery = $block->getSetting('galleryId');
 
