@@ -94,7 +94,7 @@ class MediaBlockService extends AbstractBlockService
         return $this->mediaAdmin;
     }
 
-    public function configureSettings(OptionsResolver $resolver)
+    public function configureSettings(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'media' => false,
@@ -152,7 +152,7 @@ class MediaBlockService extends AbstractBlockService
         ]);
     }
 
-    public function execute(BlockContextInterface $blockContext, ?Response $response = null)
+    public function execute(BlockContextInterface $blockContext, ?Response $response = null): Response
     {
         // make sure we have a valid format
         $media = $blockContext->getBlock()->getSetting('mediaId');
