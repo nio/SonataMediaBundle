@@ -18,7 +18,7 @@
         <parameter key="sonata.media.admin.gallery_has_media.translation_domain">%sonata.media.admin.media.translation_domain%</parameter>
     </parameters>
     <services>
-        <service id="sonata.media.admin.media.controller" class="%sonata.media.admin.media.controller%" public="true">
+        <service class="Sonata\MediaBundle\Controller\MediaAdminController" public="true">
             <call method="setContainer">
                 <argument type="service" id="service_container"/>
             </call>
