@@ -20,7 +20,7 @@
     <services>
         <service id="sonata.media.admin.media.controller" class="%sonata.media.admin.media.controller%" public="true">
             <call method="setContainer">
-                <argument type="service" id="@service_container"/>
+                <argument type="service" id="service_container"/>
             </call>
         </service>
 
