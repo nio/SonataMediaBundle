@@ -52,7 +52,6 @@ class MediaAdminController extends Controller
 
     public function listAction(Request $request): Response
     {
-dump('asdf'); die();
         $this->admin->checkAccess('list');
 
         if ($listMode = $request->get('_list_mode', 'mosaic')) {
@@ -96,6 +95,7 @@ dump('asdf'); die();
         $formView = $datagrid->getForm()->createView();
 
         $this->setFormTheme($formView, $this->admin->getFilterTheme());
+dump('asdf2'); die();
 
         return $this->render($this->admin->getTemplateRegistry()->getTemplate('list'), [
             'action' => 'list',
