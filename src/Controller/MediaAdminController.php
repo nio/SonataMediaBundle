@@ -42,7 +42,7 @@ class MediaAdminController extends Controller
         return parent::createAction();
     }
 
-    public function render($view, array $parameters = [], ?Response $response = null)
+    public function render(string $view, array $parameters = [], ?Response $response = null): Response
     {
         $parameters['media_pool'] = $this->get('sonata.media.pool');
         $parameters['persistent_parameters'] = $this->admin->getPersistentParameters();
