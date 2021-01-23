@@ -96,7 +96,7 @@ class MediaAdminController extends Controller
 
         $this->setFormTheme($formView, $this->admin->getFilterTheme());
 
-        return $this->render($this->getTemplateRegistry()->getTemplate('list'), [
+        return $this->render($this->templateRegistry->getTemplate('list'), [
             'action' => 'list',
             'form' => $formView,
             'datagrid' => $datagrid,

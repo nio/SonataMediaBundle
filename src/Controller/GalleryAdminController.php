@@ -61,7 +61,7 @@ class GalleryAdminController extends Controller
         // set the theme for the current Admin Form
         $this->setFormTheme($formView, $this->admin->getFilterTheme());
 
-        return $this->render($this->getTemplateRegistry()->getTemplate('list'), [
+        return $this->render($this->templateRegistry->getTemplate('list'), [
             'action' => 'list',
             'form' => $formView,
             'datagrid' => $datagrid,
