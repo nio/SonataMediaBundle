@@ -30,7 +30,7 @@ class GalleryAdminController extends Controller
      *
      * @return Response
      */
-    public function render($view, array $parameters = [], ?Response $response = null)
+    public function render(string $view, array $parameters = [], ?Response $response = null): Response
     {
         $parameters['media_pool'] = $this->get('sonata.media.pool');
         $parameters['persistent_parameters'] = $this->admin->getPersistentParameters();
@@ -45,7 +45,7 @@ class GalleryAdminController extends Controller
      *
      * @return Response
      */
-    public function listAction(?Request $request = null)
+    public function listAction(Request $request): Response
     {
         $this->admin->checkAccess('list');
 
@@ -72,7 +72,7 @@ class GalleryAdminController extends Controller
     /**
      * Sets the admin form theme to form view. Used for compatibility between Symfony versions.
      */
-    private function setFormTheme(FormView $formView, array $theme)
+    private function setFormTheme(FormView $formView, ?array $theme = null): void
     {
         $twig = $this->get('twig');
 

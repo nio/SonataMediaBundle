@@ -123,7 +123,7 @@ class MediaAdminController extends Controller
     /**
      * Sets the admin form theme to form view. Used for compatibility between Symfony versions.
      */
-    private function setFormTheme(FormView $formView, array $theme)
+    private function setFormTheme(FormView $formView, ?array $theme = null): void
     {
         $twig = $this->get('twig');
 
