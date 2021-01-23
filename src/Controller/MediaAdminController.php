@@ -95,7 +95,6 @@ class MediaAdminController extends Controller
         $formView = $datagrid->getForm()->createView();
 
         $this->setFormTheme($formView, $this->admin->getFilterTheme());
-dump($this->admin->getTemplateRegistry()->getTemplate('list')); die();
 
         return $this->render($this->admin->getTemplateRegistry()->getTemplate('list'), [
             'action' => 'list',
