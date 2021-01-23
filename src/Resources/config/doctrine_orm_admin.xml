@@ -20,11 +20,13 @@
     <services>
         <service id="Sonata\MediaBundle\Controller\MediaAdminController" class="Sonata\MediaBundle\Controller\MediaAdminController" public="true">
             <call method="setContainer">
+                <argument type="service" id="sonata.admin.global_template_registry">
                 <argument type="service" id="service_container"/>
             </call>
         </service>
         <service id="Sonata\MediaBundle\Controller\GalleryAdminController" class="Sonata\MediaBundle\Controller\GalleryAdminController" public="true">
             <call method="setContainer">
+                <argument type="service" id="sonata.admin.global_template_registry">
                 <argument type="service" id="service_container"/>
             </call>
         </service>

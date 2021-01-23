@@ -31,9 +31,7 @@ class MediaAdminController extends Controller
      */
     private $templateRegistry;
 
-    public function __construct(
-        TemplateRegistryInterface $templateRegistry
-    ) {
+    public function __construct(TemplateRegistryInterface $templateRegistry) {
         //parent::__construct();
         $this->templateRegistry = $templateRegistry;
     }
