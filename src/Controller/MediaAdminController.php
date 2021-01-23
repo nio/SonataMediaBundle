@@ -19,11 +19,26 @@ use Symfony\Component\Form\FormView;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+use Sonata\AdminBundle\Templating\TemplateRegistryInterface;
+
 /**
  * @final since sonata-project/media-bundle 3.21.0
  */
 class MediaAdminController extends Controller
 {
+    /**
+     * @var TemplateRegistryInterface
+     */
+    private $templateRegistry;
+
+    public function __construct(
+        TemplateRegistryInterface $templateRegistry
+    ) {
+        //parent::__construct();
+        $this->templateRegistry = $templateRegistry;
+    }
+
+
     public function createAction(Request $request = null): Response
     {
         $this->admin->checkAccess('create');
@@ -96,7 +111,7 @@ class MediaAdminController extends Controller
 
         $this->setFormTheme($formView, $this->admin->getFilterTheme());
 
-        return $this->render($this->admin->getTemplate('list'), [
+        return $this->render($this->templateRegistry->getTemplate('list'), [
             'action' => 'list',
             'form' => $formView,
             'datagrid' => $datagrid,
