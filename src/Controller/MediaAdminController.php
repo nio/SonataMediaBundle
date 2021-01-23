@@ -50,7 +50,7 @@ class MediaAdminController extends Controller
         return parent::renderWithExtraParams($view, $parameters, $response);
     }
 
-    public function listAction(?Request $request = null)
+    public function listAction(?Request $request = null): Response
     {
         $this->admin->checkAccess('list');
 
