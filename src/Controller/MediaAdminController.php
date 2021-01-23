@@ -52,6 +52,7 @@ class MediaAdminController extends Controller
 
     public function listAction(Request $request): Response
     {
+dump('asdf'); die();
         $this->admin->checkAccess('list');
 
         if ($listMode = $request->get('_list_mode', 'mosaic')) {
