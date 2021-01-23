@@ -24,7 +24,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class MediaAdminController extends Controller
 {
-    public function createAction(?Request $request = null)
+    public function createAction(Request $request = null): Response
     {
         $this->admin->checkAccess('create');
 
