@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Sonata\MediaBundle\Model;
 
 use Sonata\Doctrine\Model\ManagerInterface;
-use Sonata\DatagridBundle\Pager\PageableInterface;
+use Sonata\Doctrine\Model\PageableManagerInterface;
 
 interface MediaManagerInterface extends ManagerInterface, PageableManagerInterface
 {
